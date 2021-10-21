@@ -1,16 +1,8 @@
 'use strict';
 
 const express = require('express');
+const { phrses } = require('../model');
 const app = express();
-
-const logger = require('./middleware/logger');
-// unsure if the below 2 error variables are correct
-const handle404Error = require('./error-handlers/404');
-const handle500Error = require('./error-handlers/500');
-const phrases = require('');
-const { request } = require('http');
-const { prependOnceListener } = require('process');
-const { response } = require('express');
 
 app.use(express.json());
 app.use(logger);
